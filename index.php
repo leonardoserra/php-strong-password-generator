@@ -8,6 +8,7 @@ if(isset($_GET['pswlength'])){
     $pswlength = (int)$_GET['pswlength'];
     // echo $pswlength;
     pwdGen($pswlength);
+
 }
 
 function pwdGen($numberOfCharachters){
@@ -18,15 +19,22 @@ function pwdGen($numberOfCharachters){
         '{}[]+-*/!#$%()'
     ];
     $newPwd = [];
-    for($i = 0; $i < count($numberOfCharachters); $i++){
-            // $rndList = rand(0,count($characters)-1);
-            // echo $rndList;
-            // $rndChar = $characters[$rndList][rand(0,count($characters[$rndList]-1))]
-            // $newPwd[] = $rndChar;
+    for($i = 0; $i < $numberOfCharachters; $i++){
+
+
+            $rndList = rand(0,count($characters)-1);
+            echo $rndList;
+            $rndChar = $characters[$rndList][rand(0,count($characters[$rndList]-1))]
+            $newPwd = $rndChar;
             echo 'ciao';
-    } 
+    }
     // echo $newPwd;
-    // return $newPwd;
+    echo $characters[0][3];
+    $newPwd[] = $characters[0][3];
+    $newPwd[] = $characters[3][4];
+    $newPwd[] = $characters[2][3];
+    echo implode($newPwd);
+    return $newPwd;
 }
 
 
