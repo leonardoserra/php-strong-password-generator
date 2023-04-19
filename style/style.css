@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(44, 44, 44);
+    color: whitesmoke;
+}
+
+form {
+    background-color: aliceblue;
+    color: black;
+    padding: 50px;
+    border-radius: 25px;
+}
