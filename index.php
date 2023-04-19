@@ -8,6 +8,7 @@ if(isset($_GET['pswlength'])){
     $pswlength = (int)$_GET['pswlength'];
     // echo $pswlength;
     $_SESSION['password'] = pwdGen($pswlength);
+    header('Location: ./generated.php');
 
 }
 
@@ -56,9 +57,9 @@ if(isset($_GET['pswlength'])){
                             <div class="mb-3">
                                 <label for="pswlength" class="form-label">Inserisci lunghezza Password</label>
                             </div>
-                            <div class="mb-3">
+                            <!-- <div class="mb-3">
                                 <div for="charRepetition" class="form-label">Attiva ripetizione di caratteri</div>
-                            </div>
+                            </div> -->
                             
                         </div>
                             
@@ -67,7 +68,7 @@ if(isset($_GET['pswlength'])){
                             <div class="mb-3">
                                 <input name="pswlength" type="number" class="form-control" id="pswlength">
                             </div>
-                            <div class="mb-3">
+                            <!-- <div class="mb-3">
                                 <label for="charRepetition" class="form-label me -1">Si</label>
                                 <input type="radio" class="form-check-input" name="charRepetition" value="1" id="charRepetition1">
                             </div>
@@ -87,7 +88,7 @@ if(isset($_GET['pswlength'])){
                             <div class="mb-3">
                                 <label for="symbolsSwitch" class="form-label me-1">Simboli</label>
                                 <input type="checkbox" class="form-check-input" name="symbolsSwitch" value="1" id="symbolsSwitch">
-                            </div>
+                            </div> -->
 
                         </div>
                     
