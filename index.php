@@ -3,7 +3,7 @@ session_start();
 require_once __DIR__ . '/function.php';
 
 
-if(isset($_GET['pswlength'])){
+if(isset($_GET['pswlength']) && $_GET['pswlength'] > 0){
   
     $pswlength = (int)$_GET['pswlength'];
     // echo $pswlength;
