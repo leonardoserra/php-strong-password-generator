@@ -7,7 +7,7 @@ if(isset($_GET['pswlength'])){
   
     $pswlength = (int)$_GET['pswlength'];
     // echo $pswlength;
-    $passwordSecure = pwdGen($pswlength);
+    $_SESSION['password'] = pwdGen($pswlength);
 
 }
 
