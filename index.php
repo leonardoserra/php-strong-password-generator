@@ -2,6 +2,10 @@
 session_start();
 require_once __DIR__ . '/function.php';
 
+if(isset($_GET['pswlength'])){
+    $pswlength = $_GET['pswlength'];
+    echo $pswlength;
+}
 
 
 ?>
