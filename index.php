@@ -1,17 +1,32 @@
 <?php
 session_start();
 require_once __DIR__ . '/function.php';
-$characters = [
-    'abcdefghijklmnopqrstuvwxyz',
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-    '0123456789',
-    '{}[]+-*/!#$%()'
 
-   ]
 
 if(isset($_GET['pswlength'])){
-    $pswlength = $_GET['pswlength'];
+  
+    $pswlength = (int)$_GET['pswlength'];
     // echo $pswlength;
+    pwdGen($pswlength);
+}
+
+function pwdGen($numberOfCharachters){
+    $characters = [
+        'abcdefghijklmnopqrstuvwxyz',
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+        '0123456789',
+        '{}[]+-*/!#$%()'
+    ];
+    $newPwd = [];
+    for($i = 0; $i < count($numberOfCharachters); $i++){
+            // $rndList = rand(0,count($characters)-1);
+            // echo $rndList;
+            // $rndChar = $characters[$rndList][rand(0,count($characters[$rndList]-1))]
+            // $newPwd[] = $rndChar;
+            echo 'ciao';
+    } 
+    // echo $newPwd;
+    // return $newPwd;
 }
 
 
@@ -50,7 +65,7 @@ if(isset($_GET['pswlength'])){
                 </div>
                 <div class="container w-50">
                     
-                    <form class="row text-center mt-2 my">
+                    <form action="index.php" method="GET" class="row text-center mt-2 my">
                         <div class="col-6 text-start">
                             <div class="mb-3">
                                 <label for="pswlength" class="form-label">Inserisci lunghezza Password</label>
