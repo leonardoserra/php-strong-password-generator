@@ -7,27 +7,38 @@ if(isset($_GET['pswlength'])){
   
     $pswlength = (int)$_GET['pswlength'];
     // echo $pswlength;
-    pwdGen($pswlength);
+    $passwordSecure = pwdGen($pswlength);
 
 }
 
 function pwdGen($numberOfCharachters){
-    $characters ='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789{}[]+-*/!#$%()';
-    $newPwd = '';
+    $characters =[
+        ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],
+        ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'],
+        ['0','1','2','3','4','5','6','7','8','9'],
+        ['{','}','[',']','+','-','*','/','!','#','$','%','(',')']
+    ];
+    $newPwd = [];
     for($i = 0; $i < $numberOfCharachters; $i++){
 
+            $rndList = rand(0,count($characters)-1);
+            // echo 'valore $rndList = ' . $rndList;
+            
+            $key = $rndList;
+            // echo 'valore $key = ' . $key;
 
-            // $rndList = rand(0,count($characters)-1);
-            // echo $rndList;
+            $list = $characters[$key];
+            // echo 'valore $list = ' . $list;
+
+            $rndChar = $list[rand(0, count($list) - 1)];
+            // echo 'valore $rndChar = ' . $rndChar;
+
             // $rndChar = $characters[$rndList][rand(0,count($characters[$rndList]-1))];
-            $newPwd[] = $characters[rand(0,count($characters)-1)];
-            // echo 'ciao';
+            $newPwd[] = $rndChar;
+            // echo implode($newPwd);
     }
-    // echo $newPwd;
-    
-    // $password = implode($newPwd);
-    echo $newPwd;
-    return $newPwd;
+    // echo implode($newPwd);
+    return implode($newPwd);
 }
 
 
@@ -61,6 +72,9 @@ function pwdGen($numberOfCharachters){
             <main class="my-main">
                 <div class="container w-50">
                     <div class="row text-center mt-2 my">
+                        <?php
+                        echo $passwordSecure;
+                        ?>
                     <div class="alert alert-info" role="alert">Nessun parametro valido inserito</div>
                     </div>
                 </div>
