@@ -1,10 +1,17 @@
 <?php
 session_start();
 require_once __DIR__ . '/function.php';
+$characters = [
+    'abcdefghijklmnopqrstuvwxyz',
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    '0123456789',
+    '{}[]+-*/!#$%()'
+
+   ]
 
 if(isset($_GET['pswlength'])){
     $pswlength = $_GET['pswlength'];
-    echo $pswlength;
+    // echo $pswlength;
 }
 
 
