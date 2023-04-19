@@ -50,49 +50,53 @@ require_once __DIR__ . '/function.php';
                 </div>
                 <div class="container w-50">
                     
-                    <div class="row text-center mt-2 my">
-                        <div class="col">
-                            <form class="col">
-
-                                <div class="row">
-                                    <div class="col-6 text-start">
-                                        <div class="mb-3">
-                                            <label for="pswlength" class="form-label">Inserisci lunghezza Password</label>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div for="charRepetition" class="form-label">Attiva ripetizione di caratteri</div>
-                                        </div>
-                                        
-                                    </div>
-                                        
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="mb-3">
-                                            <input name="pswlength" type="number" class="form-control" id="pswlength">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="charRepetition" class="form-label">Si </label>
-                                            <input type="radio" class="form-check-input" name="charRepetition" id="charRepetition">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="charRepetition" class="form-label">No </label>
-                                            <input type="radio" class="form-check-input" name="charRepetition" id="charRepetition">
-                                        </div>
-                                        <div class="mb-3 form-check">
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 text-right">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                        <button type="reset" class="btn btn-warning">Reset</button>
-                                    </div>
-                            </form>
+                    <form class="row text-center mt-2 my">
+                        <div class="col-6 text-start">
+                            <div class="mb-3">
+                                <label for="pswlength" class="form-label">Inserisci lunghezza Password</label>
+                            </div>
+                            <div class="mb-3">
+                                <div for="charRepetition" class="form-label">Attiva ripetizione di caratteri</div>
+                            </div>
+                            
                         </div>
-                    </div>
+                            
+                        
+                        <div class="col-6 text-end">
+                            <div class="mb-3">
+                                <input name="pswlength" type="number" class="form-control" id="pswlength">
+                            </div>
+                            <div class="mb-3">
+                                <label for="charRepetition" class="form-label me -1">Si</label>
+                                <input type="radio" class="form-check-input" name="charRepetition" value="1" id="charRepetition1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="charRepetition" class="form-label me-1">No</label>
+                                <input type="radio" class="form-check-input" name="charRepetition" value="0" id="charRepetition2">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="lettersSwitch" class="form-label me-1">Lettere</label>
+                                <input type="checkbox" class="form-check-input" name="lettersSwitch" value="1" id="lettersSwitch">
+                            </div>
+                            <div class="mb-3">
+                                <label for="numbersSwitch" class="form-label me-1">Numeri</label>
+                                <input type="checkbox" class="form-check-input" name="numbersSwitch" value="1" id="numbersSwitch">
+                            </div>
+                            <div class="mb-3">
+                                <label for="symbolsSwitch" class="form-label me-1">Simboli</label>
+                                <input type="checkbox" class="form-check-input" name="symbolsSwitch" value="1" id="symbolsSwitch">
+                            </div>
+
+                        </div>
+                    
+                    
+                        <div class="col-12 text-start">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-warning">Reset</button>
+                        </div>
+                
+                    </form>
                     
 
                 </div>
