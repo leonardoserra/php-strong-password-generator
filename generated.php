@@ -1,7 +1,7 @@
 <?php
 session_start();
-
-$password = $_SESSION['password'];
+// $password = '';
+// $password = $_SESSION['password'];
 
 
 
@@ -34,8 +34,15 @@ $password = $_SESSION['password'];
         <div class="container w-50 mt-5">
             <div class="row text-center mt-2 my">
                 
-
-            <div class="alert alert-success mt-5" role="alert"><?php echo 'la password unica è stata generata: ' . $password; ?></div>
+            <?php if(isset($_SESSION['password'])){?>
+                <div class="alert alert-success mt-5" role="alert">
+                    <?php echo 'la password unica è stata generata: ' . $_SESSION['password']; ?>
+                </div>
+                <?php }else{?>
+                    <div class="alert alert-warning mt-5" role="alert">
+                    <?php echo 'Non hai selezionato la lunghezza della password '; ?>
+                </div>
+                    <?php }?>
             </div>
         </div>
 
