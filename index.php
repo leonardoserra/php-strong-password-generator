@@ -44,9 +44,7 @@ if(isset($_GET['pswlength']) && $_GET['pswlength'] > 0){
             <main class="my-main">
                 <div class="container w-50">
                     <div class="row text-center mt-2 my">
-                        <?php
-                        echo $passwordSecure;
-                        ?>
+                        
                     <div class="alert alert-info" role="alert">Nessun parametro valido inserito</div>
                     </div>
                 </div>
